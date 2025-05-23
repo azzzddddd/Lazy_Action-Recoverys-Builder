@@ -6,11 +6,11 @@ on:
       MANIFEST:
         description: 'SHRP Manifest'
         required: true
-        默认: 'https://github.com/SHRP-Reborn/manifest.git'
+        default: 'https://github.com/SHRP-Reborn/manifest.git'
       MANIFEST_BRANCH:
         description: 'SHRP Manifest Branch'
         required: true
-        默认: ''
+        default: ''
         type: choice
         options:
         - shrp-12.1
@@ -18,15 +18,15 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree' # Your already made Device Tree for TWRP
         required: true
-        默认: 'https://github.com/lazycodebuilder/recovery_rmx1851' 
+        default: 'https://github.com/lazycodebuilder/recovery_rmx1851' 
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch' # Your Device Tree Branch, make sure it's right.
         required: true
-        默认: 'android-14_shrp'
+        default: 'android-14_shrp'
       BUILD_TARGET:
         description: 'Specify your Build Target' # Pick among boot, recovery and vendor_boot
         required: true
-        默认: 'recovery'
+        default: 'recovery'
         type: choice
         options:
         - boot
@@ -35,12 +35,12 @@ on:
       LDCHECK:
         description: 'Use LDCHECK'
         required: false
-        默认: 'false'
+        default: 'false'
         type: boolean
       LDCHECKPATH:
         description: 'Path of blobs to check' # Use it know what kind of dependencies your missing for decryption blobs.
         required: true
-        默认: 'system/bin/qseecomd'
+        default: 'system/bin/qseecomd'
 
 jobs:
   build:
