@@ -2,7 +2,7 @@ name: PitchBlack [PBRP]
 
 on:
   workflow_dispatch:
-    在puts:
+    inputs:
       MANIFEST_BRANCH:
         description: 'PBRP Manifest Branch'
         required: true
