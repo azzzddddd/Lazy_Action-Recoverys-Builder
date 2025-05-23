@@ -42,7 +42,11 @@ on:
         description: 'Path of blobs to check' # Use it know what kind of dependencies your missing for decryption blobs.
         required: true
         default: 'system/bin/qseecomd'
-
+        type: choice
+        options:
+        - system/bin/qseecomd
+        - vendor/bin/qseecomd
+        
 jobs:
   build:
     name: Build OFRP by ${{ github.actor }}
