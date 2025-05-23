@@ -47,6 +47,7 @@ on:
         options:
         - system/bin/qseecomd
         - vendor/bin/qseecomd
+        
 jobs:
   build:
     name: Build PBRP by ${{ github.actor }}
