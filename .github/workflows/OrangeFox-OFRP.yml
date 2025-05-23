@@ -6,7 +6,7 @@ on:
       MANIFEST_BRANCH:
         description: 'OrangeFox Manifest Branch'
         required: true
-        默认: '12.1'
+        default: '12.1'
         type: choice
         options:
         - 12.1
@@ -19,15 +19,15 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree'
         required: true
-        默认: 'https://github.com/lazycodebuilder/recovery_rmx1851'
+        default: 'https://github.com/lazycodebuilder/recovery_rmx1851'
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch'
         required: true
-        默认: 'android-14_ofrp'
+        default: 'android-14_ofrp'
       BUILD_TARGET:
         description: 'Specify your Build Target'
         required: true
-        默认: 'recovery'
+        default: 'recovery'
         type: choice
         options:
         - boot
@@ -36,12 +36,12 @@ on:
       LDCHECK:
         description: 'Use LDCHECK'
         required: false
-        默认: 'false'
+        default: 'false'
         type: boolean
       LDCHECKPATH:
         description: 'Path of blobs to check' # Use it know what kind of dependencies your missing for decryption blobs.
         required: true
-        默认: 'system/bin/qseecomd'
+        default: 'system/bin/qseecomd'
 
 jobs:
   build:
